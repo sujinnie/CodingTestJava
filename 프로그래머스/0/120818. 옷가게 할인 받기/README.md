@@ -2,6 +2,16 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120818) 
 
+<details>
+<summary>풀이과정 ..</summary>
+
+- 캐스팅 잘하장
+- `*=` 같은 복합 연산자는 자동으로 캐스팅을 해주기 때문에 `(int)`를 명시하지 않아도 컴파일 에러 없이 동작
+- `answer = price*0.8`, `price = price*0.8` (x)
+- `price*=0.8`, `answer = (int) (price*0.8)` (o)
+
+</details>
+
 ### 성능 요약
 
 메모리: 79.5 MB, 시간: 0.02 ms
