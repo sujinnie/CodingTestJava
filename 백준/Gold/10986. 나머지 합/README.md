@@ -2,6 +2,23 @@
 
 [문제 링크](https://www.acmicpc.net/problem/10986) 
 
+<details>
+<summary>풀이과정 ..</summary>
+
+- 누적합 배열을 이용해서 규칙찾기.. 
+- 첨에 구현한 코드는 ArrayIndexOutOfBound 에러가뜸
+  ```java
+  st = new StringTokenizer(br.readLine());
+  sumArr[0] = Integer.parseInt(st.nextToken());
+  for(int i=1; i<N; i++) { // 누적합 배열
+      sumArr[i] = sumArr[i-1] + Integer.parseInt(st.nextToken());
+  }
+  ```
+  첫째 줄에 N과 M이 주어진다. (1 ≤ N ≤ 106, 2 ≤ M ≤ 103)
+  문제의 N의 값은 1보다 크거나 같은데 N이 1이 들어왔을떄 이 부분에서 오류가 날 것 같음..
+
+</details>
+
 ### 성능 요약
 
 메모리: 328476 KB, 시간: 1616 ms
