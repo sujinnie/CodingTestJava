@@ -7,7 +7,15 @@ class Solution {
         for(int i=0; i<attendance.length; i++) {
             if(attendance[i]) student.put(rank[i], i);
         }
-        List<Integer> top3 = new ArrayList<>(student.values()).subList(0, 3);
-        return top3.get(0)*10000 + top3.get(1)*100 + top3.get(2);
+        
+        Iterator<Integer> it = student.values().iterator();
+        int a = it.next();
+        int b = it.next();
+        int c = it.next();
+
+        return 10000*a + 100*b + c;
+        
+        // List<Integer> top3 = new ArrayList<>(student.values()).subList(0, 3);
+        // return top3.get(0)*10000 + top3.get(1)*100 + top3.get(2);
     }
 }
